@@ -1,0 +1,27 @@
+
+.collectionWrapper {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+@media (min-width: 500px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .productGrid {
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 2.5rem;
+  }
+}

@@ -1,0 +1,19 @@
+/* Background: White or Soft Beige (#FFFFFF / #F5E6D3) → keeps it clean & modern. 
+Text/Links: Charcoal (#333333) → readable and stylish. 
+Hover Effect: Accent Dusty Rose (#D4A5A5) underline or text color → gives a soft fashion vibe.
+ Logo Placement: Left side (brand name in elegant serif or sans-serif font). 
+ Menu Items: Center or right side (Home | Shop | Collections | About | Contact).
+  CTA Button (Cart / Sign In): Sage Green (#A8B5A2) button with white text, rounded edges. 
+  Pleasant & Modern Fashion Palette Primary: Soft Beige #F5E6D3 (warm, cozy, fashion-friendly) Secondary: Muted Sage Green #A8B5A2 (calm, natural, eco vibe)
+   Accent: Dusty Rose #D4A5A5 (soft, stylish highlight) Neutral Dark: Charcoal #333333 (text & contrast) Neutral Light: Pure White #FFFFFF (background, clean) */
+
+
+
+
+
+.homeContainer{
+  width: 80vh;
+}
+.mainContent {
+  padding-top: 70px; 
+}

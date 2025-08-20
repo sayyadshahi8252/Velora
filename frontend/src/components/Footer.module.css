@@ -1,0 +1,78 @@
+.footer {
+  background-color: #fdfdfd;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #f5e6d3;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.section {
+  flex: 1 1 200px;
+}
+
+.section h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #d4a5a5;
+}
+
+.section p, .section li {
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.linkList {
+  list-style: none;
+  padding: 0;
+}
+
+.linkList li a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.linkList li a:hover {
+  color: #d4a5a5;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (max-width: 500px) {
+  .container {
+    display: none; 
+  }
+
+  .bottom {
+    height: 45px; 
+    font-size: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .bottom p::before {
+    content: "Velora: Trendy clothing, best deals. ";
+    display: block;
+    font-size: 0.7rem;
+    color: #555;
+  }
+}

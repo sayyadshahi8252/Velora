@@ -1,0 +1,34 @@
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin:  auto;
+  width: 100%;
+}
+
+.heroImage {
+  width: 80%; 
+  max-width: 1200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.heroImage:hover {
+  transform: scale(1.02); 
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 850px) {
+  .heroImage {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroImage {
+    width: 95%;
+  }
+}

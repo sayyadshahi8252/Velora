@@ -1,0 +1,181 @@
+
+.container {
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #555;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+
+.container p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+}
+
+.ordersList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.orderCard {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.orderCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.orderCard h3 {
+  font-size: 1.4rem;
+  color: #d4a5a5;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderCard p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #666;
+}
+
+
+.statusBadge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: white;
+  min-width: 100px;
+  text-align: center;
+  margin-left: 8px; 
+}
+
+.statusBadge.orderplaced {
+  background-color: #007bff; 
+}
+.statusBadge.outfordelivery {
+  background-color: #ffc107; 
+}
+.statusBadge.delivered {
+  background-color: #28a745; 
+}
+.statusBadge.canceled {
+  background-color: #dc3545; 
+}
+
+.orderTable {
+  width: 100%; 
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.orderTable th,
+.orderTable td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.orderTable th {
+  background-color: #f4f4f4;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orderTable td {
+  vertical-align: middle;
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+.mobileCards {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .container {
+    padding: 30px 15px;
+  }
+  .orderCard {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .orderTable {
+    display: none;
+  }
+
+
+  .mobileCards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    margin-top: 15px;
+  }
+
+  .mobileItemCard {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+ 
+  .mobileImage {
+    width: 70px; 
+    height: 70px; 
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+
+  .mobileItemDetails {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: #444;
+  }
+  
+  .mobileItemDetails b {
+    color: #333;
+  }
+}

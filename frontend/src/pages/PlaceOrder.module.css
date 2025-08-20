@@ -1,0 +1,139 @@
+
+.container {
+  padding: 50px 0 0 0;
+  background-color: #f7f7f7;
+  min-height: 70vh;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.deliveryInfo,
+.orderSummary {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  flex: 1;
+}
+
+.deliveryInfo h3,
+.orderSummary h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.deliveryInfo form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.deliveryInfo form input:focus {
+  outline: none;
+  border-color: #e89c9c;
+}
+
+.deliveryInfo .row {
+  display: flex;
+  gap: 15px;
+}
+
+.deliveryInfo .row input {
+  flex: 1;
+}
+
+.orderSummary {
+  display: flex;
+  flex-direction: column;
+}
+
+.orderSummary .cartItem,
+.orderSummary .cartItemTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.orderSummary .cartItem span:first-child {
+  color: #555;
+}
+
+.orderSummary .cartItemTotal {
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-bottom: none;
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.paymentMethods label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+}
+
+.placeOrderBtn {
+  background-color: #e89c9c;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: auto; 
+}
+
+.placeOrderBtn:hover {
+  background-color: #eeb6b6;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 850px) {
+  .flexContainer {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .deliveryInfo .row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .deliveryInfo h3,
+  .orderSummary h3 {
+    font-size: 1.3rem;
+  }
+}

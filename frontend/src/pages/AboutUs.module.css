@@ -1,0 +1,54 @@
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background-color: #ffffff;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555555;
+  margin-bottom: 20px;
+}
+
+.keyPoints {
+  list-style: disc inside;
+  margin-bottom: 20px;
+  padding-left: 0;
+  color: #333333;
+  font-weight: 500;
+}
+
+.keyPoints li {
+  margin-bottom: 10px;
+}
+
+.imageContainer {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}

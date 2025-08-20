@@ -1,55 +1,51 @@
-import express from "express"
-import cors from "cors"
-import "dotenv/config"
-import connectDB from "./src/config/mongodb.js"
-import connectCloudinary from "./src/config/cloudinary.js"
-import userRouter from "./src/routes/userRoutes.js"
-import productRouter from "./src/routes/productRoutes.js"
-import cartRouter from "./src/routes/cartRoute.js"
-import orderRouter from "./src/routes/orderRoute.js"
+import express from "express";
+import cors from "cors";
+import "dotenv/config";
+import connectDB from "./src/config/mongodb.js";
+import connectCloudinary from "./src/config/cloudinary.js";
+import userRouter from "./src/routes/userRoutes.js";
+import productRouter from "./src/routes/productRoutes.js";
+import cartRouter from "./src/routes/cartRoute.js";
+import orderRouter from "./src/routes/orderRoute.js";
 
+// App config
+const app = express();
+const port = process.env.PORT || 4000;
 
-
-//App config
-const app=express()
-const port=process.env.PORT || 4000
-
-//middleware
-app.use(express.json({limit:"18kb"}))
-
-
+// Middleware
+app.use(express.json({ limit: "1mb" })); // increase limit
 app.use(cors({
   origin: [
-    'http://localhost:5173',               
-    'http://localhost:5174',               
-    'https://velora-frontend-hazel.vercel.app',    
-    'https://velora-admin-tau.vercel.app'        
+    'http://localhost:5173',
+    'http://localhost:5174',
+    'https://velora-frontend-hazel.vercel.app',
+    'https://velora-admin-tau.vercel.app'
   ],
   credentials: true
 }));
+
+// Debug logs
 app.use((req, res, next) => {
-  console.log('Request origin:', req.headers.origin);
+  console.log('Request:', req.method, req.path, 'Origin:', req.headers.origin);
   next();
 });
 
+// Connect DB & Cloudinary
+connectDB();
+connectCloudinary();
 
+// API routes
+app.use("/api/user", userRouter);
+app.use("/api/product", productRouter);
+app.use("/api/cart", cartRouter);
+app.use("/api/order", orderRouter);
 
-console.log("heelo")
-connectDB()
-connectCloudinary()
+// Health check
+app.get("/", (req, res) => {
+    res.send("api working successfully");
+});
 
-//api endpoint
-app.use("/api/user",userRouter)
-app.use("/api/product",productRouter)
-app.use("/api/cart",cartRouter)
-app.use("/api/order",orderRouter)
-
-app.get("/",(req,res)=>{
-    res.send("api working successfully")
-})
-
-
-
-app.listen(port,"0.0.0.0",()=>{
-    console.log(`server running on port ${process.env.PORT}`)
-})
+// Start server
+app.listen(port, "0.0.0.0", () => {
+    console.log(`Server running on port ${process.env.PORT}`);
+});

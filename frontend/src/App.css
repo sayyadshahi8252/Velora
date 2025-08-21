@@ -6,14 +6,10 @@ Hover Effect: Accent Dusty Rose (#D4A5A5) underline or text color → gives a so
   CTA Button (Cart / Sign In): Sage Green (#A8B5A2) button with white text, rounded edges. 
   Pleasant & Modern Fashion Palette Primary: Soft Beige #F5E6D3 (warm, cozy, fashion-friendly) Secondary: Muted Sage Green #A8B5A2 (calm, natural, eco vibe)
    Accent: Dusty Rose #D4A5A5 (soft, stylish highlight) Neutral Dark: Charcoal #333333 (text & contrast) Neutral Light: Pure White #FFFFFF (background, clean) */
-
-
-
-
-
 .homeContainer{
   width: 80vh;
 }
 .mainContent {
   padding-top: 70px; 
 }
+

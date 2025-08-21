@@ -50,6 +50,7 @@
 
 .productName {
   font-size: 1.1rem;
+  font-size: 0.5rem;
   font-weight: 600;
   margin: 0 0 0.5rem;
   color: #333;
@@ -68,7 +69,7 @@
   }
 
   .productName {
-    font-size: 1.25rem; 
+    font-size: 0.6rem; 
     margin-bottom: 0.75rem;
   }
 
@@ -88,7 +89,7 @@
   }
 
   .productName {
-    font-size: 1.4rem; 
+    font-size: 1rem; 
   }
 
   .productPrice {

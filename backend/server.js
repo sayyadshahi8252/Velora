@@ -19,7 +19,7 @@ app.use(cors({
     'http://localhost:5173',
     'http://localhost:5174',
     'https://velora-frontend-iota.vercel.app',
-    'https://velora-admin-mu.vercel.app'
+    'https://velora-admin-ebon.vercel.app'
   ],
   credentials: true
 }));

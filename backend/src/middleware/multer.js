@@ -1,13 +1,7 @@
 import multer from "multer";
 
-const storage = multer.diskStorage({
-  destination: function (req, file, callback) {
-    callback(null, "uploads/"); 
-  },
-  filename: function (req, file, callback) {
-    callback(null, file.originalname); 
-  },
-});
+// Use memory storage for serverless (Vercel) environments
+const storage = multer.memoryStorage();
 
 const upload = multer({ storage });
 

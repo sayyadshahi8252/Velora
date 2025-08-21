@@ -18,8 +18,8 @@ app.use(cors({
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://velora-frontend-hazel.vercel.app',
-    'https://velora-admin-tau.vercel.app'
+    'https://velora-frontend-gamma.vercel.app',
+    'https://velora-admin-mu.vercel.app'
   ],
   credentials: true
 }));
